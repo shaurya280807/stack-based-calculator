@@ -1,5 +1,22 @@
+import history 
 def calculator():
+    history.create_database()
     a=input("enter calculation")
+    if a.startswith("history"):
+        if a=='history':
+            history.history_show(0)
+            return
+        else:
+            try:
+                n=int(a.split()[1])
+                history.history_show(n)
+            except (IndexError, ValueError):
+                print("invalid input")
+        return
+    elif a=='clear':
+        history.history_clear()
+        print("history cleared")
+        return
     c=0
     m=0
     for i in a:
@@ -109,9 +126,10 @@ def calculator():
         print(values[0])
     else:
         print("error, invalid input")
-        
+    history.history_add(a,values[0])    
 while True:  
     calculator()
+
 
 
     
