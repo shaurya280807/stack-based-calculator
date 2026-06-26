@@ -1,98 +1,119 @@
-# Stack Based Calculator
+# 🧮 Stack-Based Calculator
 
-A calculator written in Python that evaluates mathematical expressions using stacks.
+A command-line calculator built in **Python** that evaluates mathematical expressions using the **Stack** data structure. The project supports complex arithmetic expressions with operator precedence, nested parentheses, unary minus, decimal numbers, robust input validation, and persistent calculation history using **SQLite**.
 
-This project started as a simple calculator and was gradually improved by adding validation, error handling, support for brackets, decimal numbers, unary minus, nested expressions, and persistent calculation history using SQLite.
+---
 
-## Features
+## 🚀 Key Features
 
-* Multi-digit number support
-* Decimal number support
-* BODMAS/operator precedence
-* Bracket support
-* Nested bracket support
-* Unary minus support (e.g. -5, 2+-3)
-* Division by zero handling
-* Invalid input detection
+* Stack-based expression evaluation
+* Multi-digit and decimal number support
+* BODMAS / operator precedence
+* Nested parentheses support
+* Unary minus handling (`-5`, `2+-3`)
+* Input validation and syntax checking
 * Consecutive operator detection
-* Parentheses validation
+* Parentheses balancing
+* Division by zero handling
 * Persistent calculation history using SQLite
-* Timestamp for every saved calculation
-* View complete calculation history
-* View last N calculations (history 5, history 10, etc.)
-* Clear calculation history
+* Timestamped calculations
+* View complete or last **N** calculations
+* Clear saved history
 
-## Example
+---
 
-Input:
+## 🛠 Technologies Used
 
+* Python 3
+* SQLite3
+* datetime module
+
+---
+
+## 📚 Concepts Demonstrated
+
+* Stack Data Structure
+* Expression Parsing
+* Operator Precedence (BODMAS)
+* Parentheses Matching
+* Error Handling
+* Input Validation
+* Modular Programming
+* SQLite Database Integration
+
+---
+
+## 💻 Example
+
+**Input**
+
+```text
 ((24+43)*5)
+```
 
-Output:
+**Output**
 
+```text
 335
+```
 
-## Available Commands
+---
 
-Normal calculation:
+## 📋 Commands
 
-2+3
+| Command         | Description              |
+| --------------- | ------------------------ |
+| `2+3*5`         | Evaluate an expression   |
+| `history`       | Show complete history    |
+| `history 5`     | Show last 5 calculations |
+| `clear history` | Delete saved history     |
 
-View complete history:
+---
 
-history
+## 📂 Project Structure
 
-View last 5 calculations:
-
-history 5
-
-Clear saved history:
-
-clear history
-
-## What I Learned
-
-While building this project I learned:
-
-* How stacks work
-* How mathematical expressions are evaluated
-* How operator precedence is implemented
-* How to debug larger programs
-* How to find and fix edge cases
-* How to test a program using unusual inputs
-* How to connect Python with SQLite databases
-* How to work with multiple Python files in the same project
-* How to import and use functions from another file
-* How timestamps can be generated using Python's datetime module
-* The difference between indexing and slicing while working with data
-
-## Project Structure
-
+```
 CODE/
-
-* calculator.py
-* history.py
-* history.db
+├── calculator.py
+├── history.py
+└── history.db
 
 DESCRIPTION/
-
-* README.md
-* JOURNEY.md
-* AI_NOTES.md
+├── README.md
+├── JOURNEY.md
+└── AI_NOTES.md
 
 TESTING/
+├── testing.md
+└── test screenshots/
+```
 
-* testing.md
-* test screenshots
+---
 
-## Future Improvements
+## 🎯 Skills Demonstrated
 
-* GUI version using Tkinter
-* Multiple user profiles
+* Stack implementation
+* Expression evaluation algorithms
+* SQLite database integration
+* Exception handling
+* Input validation
+* Modular code organization
+* Edge-case testing
+* Debugging
+
+---
+
+## 🔮 Future Improvements
+
+* GUI using Tkinter
 * Scientific calculator functions
+* Multiple user profiles
 * Search and filter history
+* Export history
 * Better expression formatting
 
-## Project Status
+---
 
-Currently working and supports arithmetic expressions involving +, -, *, /, decimals, unary minus, and nested parentheses. Calculation history is stored permanently using SQLite and can be viewed or cleared through commands.
+## 📌 Project Status
+
+Completed and fully functional. Supports arithmetic expressions involving `+`, `-`, `*`, `/`, decimal numbers, unary minus, nested parentheses, and persistent SQLite-based history.
